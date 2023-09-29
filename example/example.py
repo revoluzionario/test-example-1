@@ -18,7 +18,7 @@ def calculateCost(povertyLevel, units):
     for slab_start, slab_end, rate in electricity_rates:
         if units > slab_end:
             cost += (slab_end - slab_start + 1) * rate
-        elif units <= slab_end and units >= slab_start:
+        else:
             cost += (units - slab_start + 1) * rate
             break
 
